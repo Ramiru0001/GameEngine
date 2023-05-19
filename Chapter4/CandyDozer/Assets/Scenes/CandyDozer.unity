@@ -272,6 +272,7 @@ MonoBehaviour:
   - {fileID: 2243215621896140982, guid: 1d2e221f05c750c4bb07736727f4cfa1, type: 3}
   - {fileID: 2243215621896140982, guid: 0f8949e4e0c8bd345b5501f72778ee2d, type: 3}
   candyParentTransform: {fileID: 941430648}
+  candyManager: {fileID: 214865551}
   shotForce: 560
   shotTorque: 30
   baseWidth: 5
@@ -652,6 +653,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2243215621896430742, guid: 857304fed6bcbbe4b8e5c6f2b4183192, type: 3}
   m_PrefabInstance: {fileID: 659064917}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &214865550
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 214865552}
+  - component: {fileID: 214865551}
+  m_Layer: 0
+  m_Name: CandyManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &214865551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 214865550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a9ef5a0dcd4b064a89fe6d451511ba3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  candy: 30
+--- !u!4 &214865552
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 214865550}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.115612, y: -8.909929, z: 13.707118}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &247909681 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2243215621896430742, guid: 1d2e221f05c750c4bb07736727f4cfa1, type: 3}
@@ -1239,6 +1285,39 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2243215621896430742, guid: 857304fed6bcbbe4b8e5c6f2b4183192, type: 3}
   m_PrefabInstance: {fileID: 278595184}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &704700945
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 704700946}
+  m_Layer: 0
+  m_Name: CandyDestroyers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &704700946
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 704700945}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.0479336, y: 8.4820795, z: -3.218297}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1628256079}
+  - {fileID: 1344271045}
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -2307,6 +2386,68 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: ee1528d822f81a944af4f8e80ea837e4, type: 3}
   m_PrefabInstance: {fileID: 1268995538}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1344271044
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1344271045}
+  - component: {fileID: 1344271047}
+  - component: {fileID: 1344271046}
+  m_Layer: 0
+  m_Name: CandyDestroyerReword3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1344271045
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1344271044}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.0479336, y: -13.15, z: -4.281703}
+  m_LocalScale: {x: 17, y: 4, z: 5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 704700946}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1344271046
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1344271044}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1344271047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1344271044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3552e39265a4154d846cc2a282687b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  candyManager: {fileID: 214865551}
+  reward: 3
+  effectPrefab: {fileID: 1939841622829381354, guid: f467689b6d0201f469d7535c104b840c, type: 3}
+  effectRotation: {x: -90, y: 0, z: 0}
 --- !u!1 &1363423847
 GameObject:
   m_ObjectHideFlags: 0
@@ -2871,7 +3012,7 @@ GameObject:
   - component: {fileID: 1628256078}
   - component: {fileID: 1628256077}
   m_Layer: 0
-  m_Name: CandyDestroyer
+  m_Name: CandyDestroyerReword0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2902,6 +3043,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3552e39265a4154d846cc2a282687b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  candyManager: {fileID: 214865551}
+  reward: 0
+  effectPrefab: {fileID: 0}
+  effectRotation: {x: 0, y: 0, z: 0}
 --- !u!4 &1628256079
 Transform:
   m_ObjectHideFlags: 0
@@ -2909,13 +3054,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1628256076}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.12896614, y: -7.11, z: -5.63}
-  m_LocalScale: {x: 17, y: 1, z: 12}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.0479336, y: -17.51, z: 0.718297}
+  m_LocalScale: {x: 17, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_Father: {fileID: 704700946}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1651670211
 GameObject:
