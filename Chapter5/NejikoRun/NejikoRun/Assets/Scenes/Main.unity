@@ -218,6 +218,7 @@ MonoBehaviour:
   stageChips:
   - {fileID: 114390, guid: 8ebcd8c96e3398d45b2d60f2045ee01a, type: 3}
   - {fileID: 114390, guid: 89a6f8a3e13320d429aadc7b19d334b8, type: 3}
+  - {fileID: 114390, guid: 32b9940941968e746ace446de151b6bc, type: 3}
   startChipIndex: 1
   preInstantiate: 5
   generatedStageList:
