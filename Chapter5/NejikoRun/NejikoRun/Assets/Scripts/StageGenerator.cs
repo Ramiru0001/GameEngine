@@ -5,9 +5,10 @@ using UnityEngine;
 public class StageGenerator : MonoBehaviour
 {
     const int StageChipSize = 30;
+
     int currentChipIndex;
 
-    public Transform charater;
+    public Transform character;
     public GameObject[] stageChips;
     public int startChipIndex;
     public int preInstantiate;
@@ -26,7 +27,7 @@ public class StageGenerator : MonoBehaviour
         //次のステージチップに入ったらステージの更新処理を行う
         if (charaPositionIndex + preInstantiate > currentChipIndex)
         {
-            UpdateStage(charaPositionIndex * preInstantiate);
+            UpdateStage(charaPositionIndex + preInstantiate);
         }
     }
     //指定のIndexまでのステージチップを生成して管理下に置く
@@ -41,13 +42,13 @@ public class StageGenerator : MonoBehaviour
             generatedStageList.Add(stageObject);
         }
         //ステージ保持上限内になるまで古いステージを削除
-        while(generatedStageList.Count>preInstantiate+2) Destroy01destStage();
+        while(generatedStageList.Count>preInstantiate+2) Destroy0ldestStage();
         currentChipIndex = toChipIndex;
     }
     //指定のインデックス位置にStageオブジェクトをランダムに生成
     GameObject GenerateStage(int chipIndex)
     {
-        int nextstageChip = Random.Range(0, stageChips.Length);
+        int nextStageChip = Random.Range(0, stageChips.Length);
         GameObject stageObject = (GameObject)Instantiate(
             stageChips[nextStageChip], 
             new Vector3(0, 0, chipIndex * StageChipSize),
@@ -56,7 +57,7 @@ public class StageGenerator : MonoBehaviour
         return stageObject;
     }
     //一番古いステージを削除
-    void Destroy01destStage()
+    void Destroy0ldestStage()
     {
         GameObject oldStage = generatedStageList[0];
         generatedStageList.RemoveAt(0);
