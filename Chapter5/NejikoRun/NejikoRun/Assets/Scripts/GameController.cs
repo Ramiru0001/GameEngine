@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class GameController : MonoBehaviour
@@ -17,6 +18,19 @@ public class GameController : MonoBehaviour
         scoreText.text = "Score : " + score + "m";
         //ライフパネルを更新
         lifePanel.UpdateLife(nejiko.Life());
+        //ねじ子のライフが０になったらげーむおーばー
+        if (nejiko.Life() <= 0)
+        {
+            //これ以降のUpdateは止める
+            enabled = false;
+            //ハイスコアを更新
+            if (PlayerPrefs.GetInt("HighScore") < score)
+            {
+                PlayerPrefs.SetInt("HighScore", score);
+            }
+            //２秒後にReturnToTitleを呼び出す
+            Invoke("ReturnToTitle", 2.0f);
+        }
     }
     int CalcScore()
     {
@@ -24,4 +38,9 @@ public class GameController : MonoBehaviour
         return (int)nejiko.transform.position.z;
     }
     // Update is called once per frame
+    void ReturnToTitle()
+    {
+        //タイトルシーンに切り替え
+        SceneManager.LoadScene("Title");
+    }
 }
