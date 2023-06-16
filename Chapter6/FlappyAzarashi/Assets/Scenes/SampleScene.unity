@@ -139,6 +139,7 @@ GameObject:
   - component: {fileID: 179253611}
   - component: {fileID: 179253610}
   - component: {fileID: 179253609}
+  - component: {fileID: 179253612}
   m_Layer: 0
   m_Name: AzarashiSprite
   m_TagString: Untagged
@@ -234,6 +235,22 @@ Transform:
   m_Father: {fileID: 1125115380}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &179253612
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179253608}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!4 &307823426 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8812794329655611824, guid: bc22e772d6e0e5e43b1796b29c708d19, type: 3}
