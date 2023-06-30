@@ -54,19 +54,23 @@ public class GameController : MonoBehaviour
         azarashi.SetSteerActive(true);
         blocks.SetActive(true);
         azarashi.Flap();
+        stateText.gameObject.SetActive(false);
+        stateText.text = "";
     }
     void GameOver()
     {
         state = State.GameOver;
-        ScrollObject[] scrollObjects = FindObjectsOfType<ScrollObject>();
+        ScrollObject[] scrollObjects = GameObject.FindObjectsOfType<ScrollObject>();
         foreach (ScrollObject so in scrollObjects) so.enabled = false;
+        stateText.gameObject.SetActive(true);
+        stateText.text = "GameOver";
     }
     void Reload()
     {
         string currentSceneName = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(currentSceneName);
     }
-    public void increaseScore()
+    public void IncreaseScore()
     {
         score++;
         scoreText.text = "Score : " + score;
